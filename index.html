@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
     <!-- 
 https://codepen.io/mariothedev/pen/LYjYOeE?editors=1010
 https://animejs.com/documentation/#functionBasedPropVal
@@ -17,214 +18,50 @@ https://animista.net/play/basic/slide-bck/slide-bck-right
 https://easings.net/en#easeInOutBack
 
 
+https://codepen.io/mariothedev/pen/VwzLvwg
      -->
-    <style>
-        html, body{
-            width: 100%;
-            height:100%;
-        }
-        body{
-            background:cornflowerblue;
-        }
-
-        main{
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center; 
-            height: 100%;
-            
-            animation-name: rotate;
-            animation-duration: 1s;
-            animation-timing-function: cubic-bezier(0.480, 0.770, 0.000, 0.920);
-            animation-delay: 0s;
-            animation-iteration-count: 1;
-            animation-direction: normal;
-            animation-fill-mode: none;
-
-        }
-
-        /* .about,
-        .resume,
-        .recent,
-        .contact{
-            
-            
-        } */
-        
-        .about--section,
-        .about--link{
-            background: aliceblue;
-            border-radius: 50%;  
-            padding: 24px;
-            max-width: 290px;
-
-            animation-name: scaleSize, wabble;
-            animation-duration: 1s, 10s;
-            animation-timing-function: linear, linear;
-            animation-delay: 0s, 0s;
-            animation-iteration-count: 1,infinite;
-            animation-direction: alternate,alternate;
-            animation-fill-mode: forwards,none;
-        }
-
-        .about--section-img,
-        .about--section-text,
-        .about--section-sound,
-        .about--link-text{
-            opacity: 0;
-
-            animation-name: opacity;
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-delay: 0.8s;
-            animation-iteration-count: 1;
-            animation-direction: alternate;
-            animation-fill-mode: forwards;
-        }
-        
-        /* .about--section-img,
-        .about--section-text,
-        .about--section-sound{
-            animation-name: invisible;
-            animation-duration: 1s;
-            animation-timing-function: linear;
-            animation-delay: 1s;
-            animation-iteration-count: 1;
-            animation-direction: alternate;
-            animation-fill-mode: none;
-        } */
-
-        /* .about--img{
-            width: 250px;
-            height: 250px; 
-
-            animation-name: scaleImg;
-            animation-duration: 1s;
-            animation-timing-function: cubic-bezier(1, 0, 1, 0.13);
-            animation-delay: 0s;
-            animation-iteration-count: 1;
-            animation-direction: normal;
-            animation-fill-mode: none;
-        }
-
-        .about--sound{
-            width: 90px;
-            height: 90px;
-
-            animation-name: scaleSound;
-            animation-duration: 1s;
-            animation-timing-function: cubic-bezier(1, 0, 1, 0.13);
-            animation-delay: 0s;
-            animation-iteration-count: 1;
-            animation-direction: normal;
-            animation-fill-mode: none;
-        }
-
-
-
-        .about--link,
-        .resume--link,
-        .recent--link,
-        .contact--link
-        {
-            width: 50px;
-            height: 50px;
-        }  */
-
-        @keyframes scaleSize {
-            
-            0%{
-             transform: scale(0.15) scale3d(0.5, 2, 1);
-            }
-            100%{
-                transform: scale(1) scaleX(1);
-            }
-        }
-
-        @keyframes opacity {
-            0%{
-                opacity: 0;
-            }
-            100%{
-                opacity: 1;
-            }
-        } 
-        @keyframes rotate {
-            0%{
-                transform: rotate(660deg) translateX(30px);
-            }
-            100%{
-                transform: rotate(0deg) translateX(0);
-            }
-        } 
-        
-        @keyframes wabble {
-            0%{
-                border-radius: 44% 56% 64% 36% / 39% 43% 57% 61%;
-            }
-            25%{
-                border-radius: 44% 56% 74% 26% / 57% 57% 43% 43%;
-            }
-            50%{
-                border-radius: 44% 56% 34% 66% / 75% 36% 64% 25%;
-            }
-            75%{
-                border-radius: 41% 59% 62% 38% / 50% 56% 44% 50%;
-            }
-            100%{
-                border-radius: 64% 36% 40% 60% / 57% 57% 43% 43%;
-            }
-        } 
-         
-        @keyframes scaleImg {
-            0%{
-                transform: scale(0.21);
-            }
-            50%{
-                transform: scale(1.2);
-            }
-            100%{
-                transform: scale(1);
-            }
-        } 
-        
-        @keyframes scaleSound {
-            0%{
-                transform: scale(0.6);
-            }
-            50%{
-                transform: scale(1.2);
-            }
-            100%{
-                transform: scale(1);
-            }
-        } 
-
-       
-
-
-
-
-    </style>
+    
 </head>
 <body>
 
     <main>
         <section>
-            <div class="about about--section">
-                <div class="about about--section-img"> <img src="" width="250" height="250" alt=""></div> 
-                <div class="about about--section-text">about - some really long text about everything about life. And more more more self task about oneself.. you know the deal.. look forward to all this.. ye ssir</div> 
-                <div class="about about--section-sound">about sound</div>
+            <div class="about">
+                    <div class="about--parent">
+                        <div class="about--img"> <img src="" width="250" height="250" alt=""></div> 
+                        <div class="about--text">about - some really long text about everything about life. And more more more self task about oneself.. you know the deal.. look forward to all this.. ye sir</div> 
+                        <div class="about--sound">about sound</div>
+                    </div>
             </div>
         </section>
         <section>
-            <div class="about about--link">
-                <div class="about about--link-text">About</div>
-            </div> 
-            <!-- <div class="resume resume--link">resume link</div> 
-            <div class="recent recent--link">recent link</div> 
-            <div class="contact contact--link">contact link</div>  -->
+            <div class="menu">
+                    <div class="menu--parent">
+                        <div class="menu--about">
+                            <p>about</p>
+                        </div>
+                        <div class="menu--resume">
+                            <p>resume</p>
+                        </div> 
+                        <div class="break"></div> <!-- break to a new row -->
+                        <div class="menu--contact">
+                            <p>contact</p>
+                        </div> 
+                        <div class="menu--recent">
+                            <p>recent</p>
+                        </div> 
+                    </div>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="svgBlur">
+                <defs>
+                    <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                      <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
 
         </section>
     </main>
