@@ -1,1 +1,0 @@
-{"version":3,"file":"js/app.d54e217a.js","mappings":"mBAMAA,QAAQC,IAAI,uB","sources":["webpack://webpack-starter/./src/scripts/index.js"],"sourcesContent":["import '../styles/index.scss';\n\nif (process.env.NODE_ENV === 'development') {\n  require('../index.html');\n}\n\nconsole.log('webpack starterkit');\n"],"names":["console","log"],"sourceRoot":""}
