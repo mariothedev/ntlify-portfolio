@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>webpack starterkit</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+    <script src="https://kit.fontawesome.com/4040e3be26.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+        integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+
+    <div class="cube--demo">
+        <div class="cubes">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+        </div>
+    </div>
+
+
+    <div class="cube--animation">
+    </div>
+
+
+    <main class="flex flex-col items-center h-full w-full p-3.5 lg:p-10">
+
+        <section class="max-w-4xl lg:w-6/12 w-full p-3.5 portfolio">
+
+
+                <h1 class="text-2xl m-0 portfolio--header">About</h1>
+                <div class="p-0 m-0 w-10 h-0 portfolio--hr"></div>
+
+                <div class="text-gray-400 lg:text-2xl">
+
+                    <div class="shape-outer nonagon">
+                        <div class="shape-inner nonagon"></div>
+                    </div>
+                    <p class="my-6">Hi! I'm Mario Callejas. I'm a full-stack developer ready to take my skills and
+                        create the next big thing. Even though, I can build anything I put my mind too and tackle any
+                        part part of the stack(front-end, back-end, devops etc.,). I have a soft spot for making
+                        easy-to-use, functional products that people use and enjoy. I am interested in tackling problems
+                        that really challenge me and put my skills to the test. I was originally born in Venezuela,
+                        raised in the United States and now living in Norway. My experience varies from working at
+                        Fortune 100 companies to Sillicon Valley based startups. Want to talk? Let's have some fun
+                        together!</p>
+                    
+                </div>
+
+                <br>
+
+
+                <h1 class="text-2xl m-0 portfolio--header">Recent Works</h1>
+                <div class="p-0 m-0 w-10 h-0 portfolio--hr"></div>
+
+                <div class="text-gray-400 lg:text-2xl py-5">
+
+                    <p>Timerfy - A pomodoro technique timer that helps users maintain focus and productivity. Reached
+                        around 1.5k monthly users during it's first months of being launched.</p>
+                    <a href="#"><i class="fas fa-link text-gray-500 text-3xl p-1.5"></i>Timerfy.com</a>
+                    <br>
+                    <br>
+                    <p>Glue - A pomodoro technique timer that helps users maintain focus and productivity. Reached
+                        around 1.5k monthly users during it's first months of being launched.</p>
+                    <a href="#"><i class="fas fa-link text-gray-500 text-3xl p-1.5"></i>glue.com</a>
+                </div>
+
+
+                <h1 class="text-2xl m-0 portfolio--header">Contact</h1>
+                <div class="p-0 m-0 w-10 h-0 portfolio--hr"></div>
+
+
+
+                <div class="flex flex-col flex-wrap justify-evenly lg:flex-row portfolio--contact">
+
+                    <div class="bg-soft-grey cursor-pointer hover:scale-110 my-3 p-3 transform rounded text-gray-500 lg:text-2xl"><a
+                            href="tel:+"><i class="fas fa-phone p-1.5"></i>545889888</a>
+                    </div>
+                    <div class="bg-soft-grey cursor-pointer hover:scale-110 my-3 p-3 transform rounded text-gray-500 lg:text-2xl"><a
+                            href="mailto:"><i
+                                class="fas fa-at p-1.5"></i>mariothedev@gmail.com</a>
+                    </div>
+                    <div class="bg-soft-grey cursor-pointer hover:scale-110 my-3 p-3 transform rounded text-gray-500 lg:text-2xl"><a
+                            href="#"><i class="fas fa-file p-1.5"></i>Resume</a></div>
+                    <div class="bg-soft-grey cursor-pointer hover:scale-110 my-3 p-3 transform rounded text-gray-500 lg:text-2xl"><a
+                            href="#"><i class="fab fa-github-alt p-1.5"></i>Github</a>
+                    </div>
+
+
+                </div>
+
+
+
+        </section>
+
+    </main>
+
+    <script>
+
+
+        const slideIn3DContent = _ => anime({
+            targets: '.portfolio',
+            duration: 800,
+            skewY: ['-10deg', '-10deg'],
+            translateX: ['-105vw', 0],
+            translateY: ['-105vh', '7vmax'],
+        })
+
+        const boxParent = document.querySelector('.cube--demo')
+
+        const hiddenClasses = ['absolute', 'invisible', 'opacity-0']
+
+        boxParent.addEventListener('animationend', _ => {
+            boxParent.style.display = "none"
+            slideIn3DContent()
+        })
+
+
+
+    </script>
+</body>
+
+</html>
