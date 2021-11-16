@@ -1,8 +1,24 @@
-$c-white: #fff;
-$c-black: #000;
+/// reset
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #212121;
+  margin: 0;
+  padding: 0;
+}
+
+
 $ani-dur: 3s;
 $size: 50px;
 
+// cube animation
 @mixin fill {
   position: absolute;
   top: 0;
@@ -120,7 +136,6 @@ $size: 50px;
 
 }
 
-
 .portfolio--header{
     background-image: linear-gradient(1deg, #fa63ff, #00dbde);
     color: transparent;
@@ -137,7 +152,7 @@ $size: 50px;
 
 
 
-// octagon
+// octagon image
 .shape-outer {
   display: flex;
   flex-shrink: 0;
@@ -162,28 +177,7 @@ $size: 50px;
 }
 
 
-
-// cube--animation
-
-
-
-/// reset
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  // background-color: #c2c2c2;
-  background-color: #212121;
-  margin: 0;
-  padding: 0;
-}
-
+// custom hover background
 .bg-soft-grey{
   background-color: #3c3c3c;
 }
