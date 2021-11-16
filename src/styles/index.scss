@@ -148,6 +148,9 @@ $size: 50px;
   border-bottom-width: 3px;
   border-image: linear-gradient(10deg, #cb55cd, #00dbde) 1;
 }
+.portfolio--contact > div{
+  flex: 1 1 auto;
+}
 
 
 
@@ -171,7 +174,7 @@ $size: 50px;
 .shape-inner {	
   height: calc(130px + 4vw);
   width: calc(130px + 4vw);
-  background: url(https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=300&h=300&fit=crop&crop=faces) no-repeat center;
+  background: url(https://avatars.githubusercontent.com/u/6800783?v=4) no-repeat center;
   background-size: cover;
   margin: auto;
 }
