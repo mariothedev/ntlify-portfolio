@@ -1,0 +1,2 @@
+(()=>{"use strict";const e=document.querySelector(".cube--demo");e.addEventListener("animationend",(t=>{e.style.display="none",anime({targets:".portfolio",duration:800,skewY:["-10deg","-10deg"],translateX:["-105vw",0],translateY:["-105vh","7vmax"]})}))})();
+//# sourceMappingURL=app.13617d7e.js.map
